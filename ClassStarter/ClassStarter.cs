@@ -37,7 +37,6 @@ namespace ClassStarter
 
         public static int[] RangerGear = new int[]
         {
-			//how to add several arrows?
 			ItemID.SilverBow,
             ItemID.MagicQuiver,
             ItemID.WoodenArrow
@@ -57,5 +56,28 @@ namespace ClassStarter
             ItemID.RecallPotion,
             ItemID.WormholePotion
         };
+
+
+        public static List<int> TankGearList;
+
+        public static void SetUp()
+        {
+            TankGearList = TankGear.ToList();
+        }
+
+
+        public override void SetupStartInventory(IList<Item> items)
+        {
+            // Remove all items
+            items.Clear();
+            SetUp();
+
+            for (int i = 0; i < TankGearList.Count; i++)
+            {
+                Item item = new Item();
+                item.SetDefaults(TankGearList[i]);
+                items.Add(item);
+            }
+        }
     }
 }
