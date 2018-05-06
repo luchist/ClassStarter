@@ -1,0 +1,10 @@
+author = luchist
+version = 0.0.0.1
+displayName = Class Starter
+hideCode = false
+hideResources = false
+includeSource = true
+languageVersion = 6
+includePDB = true
+notworkingside = Client
+buildIgnore = .vs\*, Properties\*, *.csproj, *.user, obj\*, bin\*, *.config, lib\*, .gitignore, .git\*
