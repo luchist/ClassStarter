@@ -1,3 +1,3 @@
 ClassStarter
 
-Coming Soon
+Coming Soon™
